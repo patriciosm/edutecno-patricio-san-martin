@@ -1,0 +1,36 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#373A3C;
+}
+h1{
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+}
+h3{
+    font-weight: 700;
+}
+h5{
+    font-weight: 700;
+}
+.bg-fuccia{
+    background-color: #e83e8c;
+}
+.bg-celeste{
+    background-color: #17A2B8;
+    color: #fff;
+}
+.navbar-brand>img{
+    width: 132px;
+}
+.fab{
+    font-size: 48px;
+}
+footer{
+    text-align: center;
+}
+.logo-footer{
+    width: 53px;
+}

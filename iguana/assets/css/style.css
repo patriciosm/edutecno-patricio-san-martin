@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    color:#FFF;
+    background-color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4em;
+
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+p{
+    margin-bottom: 20px;
+}
+h1,h2{
+    text-align: center;
+    font-weight: 500;
+}
+h1{
+    font-size: 50px;
+    margin:30px 0;
+}
+h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+header{
+    margin-bottom: 40px;
+}
+header>img{
+    width: 100%;
+}
+.fondo-cafe,footer{
+    background-color: #1e1a13;
+}
+.contenedor{
+    padding: 50px 20px 20px;
+}
+.descripcion,.caracteristicas,.lista-imagenes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.descripcion{
+    margin-bottom: 40px;
+}
+.texto-descripcion{
+    width: 475px;
+    margin-right: 60px;
+    align-self: center;
+}
+.imagen-descripcion{
+    width: 400px;
+}
+.imagen-descripcion>img{
+    width: 100%;
+}
+.caracteristicas>div{
+    text-align: center;
+    margin: 10px 40px 30px;
+}
+.caracteristicas>div>span{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+.caracteristicas>div>p{
+    font-size: 22px;
+}
+.contenedor-imagen{
+    width: 316px;
+    height: 202px;
+    margin: 10px 10px 30px;
+}
+.contenedor-imagen>img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    padding: 30px 0 10px;
+    text-align: center;
+}
