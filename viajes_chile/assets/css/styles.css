@@ -1,0 +1,16 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+}
+.bg-black{
+    background-color: #090909;
+}
+h2{
+    font-weight: 500;
+}
+hr{
+    background-color: #0ca7b3;
+    height: 2px;
+}

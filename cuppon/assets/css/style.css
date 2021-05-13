@@ -1,0 +1,39 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #212529;
+}
+.bg-success{
+    background-color: #28A745 !important;
+}
+.card-title{
+    font-weight: 300 !important;
+}
+.card-text{
+    color: #707070;
+}
+.fs-6{
+    font-size:0.9rem !important;
+}
+.btn{
+    font-weight: 500 !important;
+}
+.fw-bold{
+    font-weight: 500 !important;
+    font-size: 1.35rem !important;
+}
+.text-success{
+    color: #28A745 !important;
+}
+.precios{
+    flex-basis: 1rem !important;
+}
+.card-promociones{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+footer{
+    color: #707070;
+}

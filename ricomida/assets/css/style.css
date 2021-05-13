@@ -1,0 +1,33 @@
+body{
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #393939;
+}
+.logo{
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    color: #fff;
+}
+h1 , h2 , h4 , h5 , .font-weight-bolder{
+    font-weight: 700 !important;
+}
+.borde-inferior-2{
+    border-bottom: 2px solid #aaa;
+}
+.borde-inferior-4{
+    border-bottom: 4px solid #aaa;
+}
+li{
+    list-style-type: none;
+}
+.carousel-indicators li{
+    background-color: #393939;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+}
+.fuente-alternativa{
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+}
