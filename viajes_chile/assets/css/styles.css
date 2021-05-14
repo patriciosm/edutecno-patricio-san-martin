@@ -7,10 +7,27 @@ body{
 .bg-black{
     background-color: #090909;
 }
+.carousel-item{
+    max-height: 600px;
+}
 h2{
     font-weight: 500;
+    font-size: 50px;
 }
 hr{
     background-color: #0ca7b3;
     height: 2px;
+    margin-top: 1.5rem;
+}
+.accordion .card{
+    background-color: inherit;
+    border: 0;
+}
+.accordion .card-header{
+    background-color: #0ca7b3;
+    padding: 0;
+}
+.accordion .card-header i{
+    color: #fff;
+    font-size: 1.4rem;
 }

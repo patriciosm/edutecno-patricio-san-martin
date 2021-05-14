@@ -43,15 +43,27 @@
         </nav>
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner vh-100">
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="LLamas en el altiplano">
+                    <img src="assets/img/carousel1.jpg" class="d-block w-100 img-fluid" alt="LLamas en el altiplano">
+                    <div class="carousel-caption">
+                        <h2>Desierto</h2>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="Atardecer en Rapa Nui">
+                    <img src="assets/img/carousel2.jpg" class="d-block w-100 img-fluid" alt="Atardecer en Rapa Nui">
+                    <div class="carousel-caption">
+                        <h2>Rapa Nui</h2>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="Pingüino">
+                    <img src="assets/img/carousel3.jpg" class="d-block w-100 img-fluid" alt="Pingüino">
+                    <div class="carousel-caption">
+                        <h2>Patagonia</h2>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -65,31 +77,84 @@
         </div>
    </header>
    <main class="bg-black py-5">
-        <section id="Quienes-Somos" class="container">
-            <h2>¿Quienes Somos?</h2>
-            <hr>
-            <div class="row">
-                <div class="col col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus libero ullam nulla dignissimos, fuga maiores quae quia quod eligendi in. Possimus incidunt nisi voluptatibus est dolore sit dolor, quidem recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta modi id quae magni eius nam nesciunt quaerat neque voluptatibus. Delectus, aperiam aliquam? Amet, possimus rerum? Amet quis tempora dolores.</p>
-                </div>
-                <div class="col col-md-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, rem? Sequi minus adipisci odio fugiat reprehenderit est distinctio quis, similique culpa nobis sed quisquam sit, saepe cum iste laboriosam officia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero magni illo tenetur dolorem eum, labore temporibus veritatis sint earum ratione officiis voluptates in! Harum nihil ratione soluta pariatur natus hic?</p>
-                </div>
-                <div class="col col-md-4">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ducimus quam perspiciatis omnis sed, est eum modi esse enim quis similique voluptates repellendus iste quibusdam tenetur atque corrupti quos nesciunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem amet quo illum obcaecati labore. Nostrum dolorum qui voluptas corporis doloremque, saepe dolores quod nobis deserunt voluptatibus eius! Ipsum, necessitatibus eos!</p>
-                </div>
-            </div>
-        </section>
-        <section id="Destacados" class="container">
-            <h2>Destacados</h2>
-            <hr>
-            <div class="row">
 
+        <section id="Quienes-Somos" class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2>¿Quienes Somos?</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col col-md-4">
+                    <div class="accordion" id="accordion-1">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <div>
+                                    <i class="fas fa-plane btn btn-block" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1"></i>
+                                </div>
+                            </div>
+                            <div id="collapse-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-1">
+                                <div class="card-body px-2">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-md-4">
+                    <div class="accordion" id="accordion-2">
+                        <div class="card">
+                            <div id="collapse-2" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion-2">
+                                <div class="card-body px-2">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                            <div class="card-header" id="headingTwo">
+                                <div>
+                                    <i class="fas fa-mountain btn btn-block" data-toggle="collapse" data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-md-4">
+                    <div class="accordion" id="accordion-3">
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <div>
+                                    <i class="fas fa-route btn btn-block" data-toggle="collapse" data-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3"></i>
+                                </div>
+                            </div>
+                            <div id="collapse-3" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion-3">
+                                <div class="card-body px-2">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="Destacados" class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2>Destacados</h2>
+                    <hr>
+                </div>
+            </div>
+        </section>
+
         <section id="Contacto" class="container">
-            <h2>Contacto</h2>
-            <hr>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2>Contacto</h2>
+                    <hr>
+                </div>
+            </div>
         </section>
    </main>
 
@@ -98,5 +163,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+   <script src="assets/js/script.js"></script>
 </body>
 </html>
