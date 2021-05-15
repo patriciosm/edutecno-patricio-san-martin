@@ -33,7 +33,9 @@ hr{
     color: #fff;
     font-size: 1.4rem;
 }
-
+#Destacados .card-body{
+    background-color: #0ca7b3;
+}
 @media (min-width:768px){
     .carousel-caption h2{
         font-size: 60px;
