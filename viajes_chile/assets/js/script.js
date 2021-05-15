@@ -6,5 +6,4 @@ $(function () {
     .mouseleave(function(){
         $(this).find(".card-body").css({"background-color":"inherit","color":"#fff"});
     });
-
 })
