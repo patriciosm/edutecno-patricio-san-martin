@@ -1,3 +1,5 @@
+/* Estilos Generales */
+
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -7,48 +9,75 @@ body{
 .bg-black{
     background-color: #090909;
 }
-.carousel-item{
-    max-height: 100vh;
-}
-.carousel-caption{
-    bottom: 50px;
-}
-.carousel-caption h2{
-    font-weight: 800;
+.bg-turquoise{
+    background-color: #0ca7b3;
 }
 hr{
     background-color: #0ca7b3;
     height: 2px;
-    margin-top: 1.5rem;
+    margin-bottom: 2.5rem; 
 }
-.accordion .card{
+
+.navbar-nav .active , .item-hover{
+    border-left: 2px solid rgba(255,255,255,.8);
+    padding-left: 1.2rem;
+}
+
+/* Estilos Carousel */
+
+header .carousel .carousel-inner .carousel-item{
+    max-height: 100vh;
+}
+header .carousel .carousel-inner .carousel-item .carousel-caption{
+    bottom: 50px;
+}
+header .carousel .carousel-inner .carousel-item .carousel-caption h2{
+    font-weight: 800;
+}
+
+/* Estilos Quienes Somos */
+
+#Quienes-Somos .accordion .card{
     background-color: inherit;
     border: 0;
 }
-.accordion .card-header{
+#Quienes-Somos .accordion .card .card-header{
     background-color: #0ca7b3;
     padding: 0;
 }
-.accordion .card-header i{
+#Quienes-Somos .accordion .card .card-header div i{
     color: #fff;
     font-size: 1.4rem;
 }
-#Destacados .card-body{
-    background-color: #0ca7b3;
+
+/* Estilos Destacados */
+
+#Destacados .card .card-body a{
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
 }
-footer{
-    background-color: #0ca7b3;
-}
-footer p{
+
+/* Estilos del Footer */
+
+footer div p{
     font-size: 1.8rem;
     font-weight: 500;
 }
-footer i{
+footer div i{
     font-size: 2rem;
+    color: #fff;
 }
 
 @media (min-width:768px){
-    .carousel-caption h2{
+
+    .navbar-nav .active , .item-hover{
+        border-bottom: 2px solid rgba(255,255,255,.8);
+        border-left: 0;
+        padding-left: 0;
+    }
+    header .carousel .carousel-inner .carousel-item .carousel-caption h2{
         font-size: 60px;
     }
+
 }
