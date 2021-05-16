@@ -16,4 +16,15 @@ $(function () {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+
+    $(".nav-link").click(function(event){
+        event.preventDefault();
+        var enlace = this.hash;
+
+        $("html").animate(
+            {
+                scrollTop: $(enlace).offset().top,
+            },800
+        );
+    })
 })

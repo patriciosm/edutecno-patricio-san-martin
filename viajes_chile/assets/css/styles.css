@@ -1,5 +1,4 @@
 /* Estilos Generales */
-
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -18,13 +17,13 @@ hr{
     margin-bottom: 2.5rem; 
 }
 
+/* Estilos Barra de Navegación */
 .navbar-nav .active , .item-hover{
     border-left: 2px solid rgba(255,255,255,.8);
     padding-left: 1.2rem;
 }
 
 /* Estilos Carousel */
-
 header .carousel .carousel-inner .carousel-item{
     max-height: 100vh;
 }
@@ -36,7 +35,6 @@ header .carousel .carousel-inner .carousel-item .carousel-caption h2{
 }
 
 /* Estilos Quienes Somos */
-
 #Quienes-Somos .accordion .card{
     background-color: inherit;
     border: 0;
@@ -51,7 +49,6 @@ header .carousel .carousel-inner .carousel-item .carousel-caption h2{
 }
 
 /* Estilos Destacados */
-
 #Destacados .card .card-body a{
     color: #fff;
     font-weight: 500;
@@ -59,7 +56,6 @@ header .carousel .carousel-inner .carousel-item .carousel-caption h2{
 }
 
 /* Estilos del Footer */
-
 footer div p{
     font-size: 1.8rem;
     font-weight: 500;
@@ -71,11 +67,14 @@ footer div i{
 
 @media (min-width:768px){
 
+    /* Estilos Barra de Navegación */
     .navbar-nav .active , .item-hover{
         border-bottom: 2px solid rgba(255,255,255,.8);
         border-left: 0;
         padding-left: 0;
     }
+
+    /* Estilos Carousel */
     header .carousel .carousel-inner .carousel-item .carousel-caption h2{
         font-size: 60px;
     }
