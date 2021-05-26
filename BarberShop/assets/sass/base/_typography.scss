@@ -1,0 +1,30 @@
+/* Typography Styles */
+body {
+    font-family: $roboto;
+    font-size: $medium;
+    color: $nickel;
+}
+
+p {
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-family: $playfair;
+    font-size: $x-large;
+    font-weight: $font-black;
+    font-style: italic;
+}
+
+h2 {
+    font-family: $playfair;
+    font-size: $x-large;
+    font-weight: $font-black;
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: $xx-large;
+    }
+}

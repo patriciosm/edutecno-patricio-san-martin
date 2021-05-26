@@ -1,0 +1,18 @@
+/* Base Styles */
+p {
+    margin-bottom: 3rem;
+}
+
+a {
+    color: $ruddy-pink;
+    text-decoration: none;
+
+    &:hover {
+        color: $eerie-black;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $platinum;
+    }
+}

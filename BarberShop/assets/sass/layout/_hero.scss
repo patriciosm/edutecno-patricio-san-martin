@@ -1,0 +1,47 @@
+/* Hero Styles */
+.hero {
+    background-image: url('../images/post-image.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.hero_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70vw;
+    height: 55vh;
+    color: $white;
+    text-align: center;
+}
+
+.hero_link {
+    display: block;
+    color: $white;
+    transform: rotate(180deg);
+    font-size: $x-large;
+    &:hover {
+        color: $fuzzy-wuzzy;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-position: 100% 100%;
+    }
+
+    .hero_container {
+        width: 50vw;
+        height: 55vh;
+    }
+
+    .hero_link {
+        font-size: $xx-large;
+    }
+}

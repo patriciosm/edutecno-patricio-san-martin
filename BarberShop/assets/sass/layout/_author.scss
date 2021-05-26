@@ -1,0 +1,45 @@
+/* Author Styles */
+.author {
+    border-top: 2px solid $platinum;
+    padding: 50px 0 60px;
+}
+
+.author_card{
+    border: 0;
+    text-align: center;
+}
+
+.author_thumbnail {
+    margin: 0 auto;
+}
+
+.author_name {
+    font-family: $playfair;
+    font-style: italic;
+    color: $eerie-black;
+    font-weight: $font-black;
+    line-height: 2.5rem;
+    font-size: $x-large;
+}
+
+.author_email {
+    font-size: $large;
+}
+
+.author_description {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .author {
+        padding: 70px 0 80px;
+    }
+
+    .author_card {
+        text-align: left;
+    }
+    
+    .author_description {
+        display: block;
+    }
+}
