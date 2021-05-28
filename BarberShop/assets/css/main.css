@@ -9961,6 +9961,7 @@ h2 {
   padding: 10px 0;
 }
 
+/* Navigation Styles */
 .navigation_logo {
   width: 78px;
 }
@@ -10128,6 +10129,9 @@ h2 {
   background-color: #6C6E70;
   border: 1px solid #6C6E70;
   color: #FFF;
+}
+.pagination_link:focus {
+  outline: 0px;
 }
 
 /* Footer Styles */

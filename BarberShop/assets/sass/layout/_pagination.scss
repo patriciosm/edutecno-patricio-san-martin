@@ -27,4 +27,7 @@
         border: 1px solid $nickel;
         color: $white;
     }
+    &:focus{
+        outline: 0px;
+    }
 }
