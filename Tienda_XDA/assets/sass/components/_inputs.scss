@@ -1,0 +1,26 @@
+/* Inputs Styles*/
+.form__container {
+    margin-bottom: 20px;
+}
+.form__label {
+    font-family: $old-standard;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__input-email {
+    padding: .4rem .5rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) { 
+    .form__input-email {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    .form__input-email {
+        width: 70%;
+    }
+}

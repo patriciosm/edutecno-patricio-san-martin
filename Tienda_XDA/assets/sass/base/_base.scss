@@ -1,0 +1,14 @@
+/* Base Styles */
+a {
+    text-decoration: none;
+}
+p {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) { 
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+}

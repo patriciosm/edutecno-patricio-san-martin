@@ -1,0 +1,31 @@
+/* Buttons Styles */
+.button {
+    border: 1px solid $smoky-black;
+    padding: .6rem 1.1rem;
+    background-color: $white;
+    font-family: $raleway;
+    font-weight: $bold;
+    cursor: pointer;
+    &:hover {
+        border-color: $quick-silver;
+    }
+    &:focus {
+        border-color: $quick-silver;
+        color: $quick-silver;
+    }
+}
+.button__alternative {
+    font-family: $old-standard;
+    font-weight: $bold;
+    color: $smoky-black;
+    background-color: $white;
+    border: none;
+    font-size: $x-large;
+    cursor: pointer;
+    &:hover {
+        color: $quick-silver;
+    }
+    &:focus {
+        color: $quick-silver;
+    }
+}

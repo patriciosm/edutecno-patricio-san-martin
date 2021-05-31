@@ -1,0 +1,23 @@
+/*Hero Styles */
+.hero {
+    background-image: url("../images/imagen1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+}
+
+@media screen and (min-width: 768px) { 
+    .hero {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    .hero {
+        order:2;
+        width: 55%;
+        height: auto;
+        min-height: 100%;
+    }
+}

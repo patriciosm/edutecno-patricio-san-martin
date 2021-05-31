@@ -1,0 +1,16 @@
+/* Article Styles */
+.article {
+    padding: 50px 40px 40px 40px;
+}
+
+@media screen and (min-width: 768px) { 
+    .article {
+        padding: 20px 100px 80px 80px;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    .article {
+        padding: 50px 120px 40px 80px;
+    }
+}

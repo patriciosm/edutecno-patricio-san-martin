@@ -1,0 +1,109 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.logo {
+    background-color: $smoky-black;
+    text-align: center;
+    padding: 1.8rem 1rem;
+}
+.logo__link {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $old-standard;
+    font-weight: $bold;
+    font-size: $x-large;
+}
+.navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    width: 100%;
+}
+
+/* Button Small Device */
+
+.navigation__label-toggler{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-right: 30px;
+    width: 36px;
+    cursor: pointer;
+    span{
+        background-color: $smoky-black;
+        border-radius: 10px;
+        height: 5px;
+        margin: 3px 0;
+        transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+}
+.navigation__toggler {
+    display: none;
+    &:checked ~ .navigation__label-toggler span:nth-of-type(1){
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(7px,6px)
+    }
+    &:checked ~ .navigation__label-toggler span:nth-of-type(2){
+        transform-origin:top;
+        transform:rotatez(-45deg)
+    }
+    &:checked ~ .navigation__label-toggler span:nth-of-type(3){
+        transform-origin:bottom;
+        width:100%;
+        transform: translate(1px,-12px) rotatez(45deg);
+    }
+    &:checked ~ .navigation__list {
+        display: block;
+    }
+}
+
+/* Links*/
+
+.navigation__list {
+    display: none;
+    background-color: $white;
+    margin-top: 28px;
+    text-align: center;
+}
+.navigation__item {
+    list-style-type: none;
+    padding: .5rem 0;
+}
+.navigation__link {
+    font-weight: $bold;
+    color: $smoky-black;
+    &:hover {
+        color: $granite-gray;
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    .logo {
+        padding: 2.2rem 1.2rem;
+    }
+    .logo__link {
+        font-size: $xx-large;
+    }
+    .navigation {
+        position: relative;
+        margin: 42px 30px 0 0;
+        top: 0;
+        width: auto;
+    }
+    .navigation__label-toggler {
+        display: none;
+    }
+    .navigation__list {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+    .navigation__item {
+        list-style-type: none;
+        margin: 0 1rem;
+    }
+}

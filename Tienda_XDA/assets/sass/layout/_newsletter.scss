@@ -1,0 +1,24 @@
+/* Newsletter Styles */
+.newsletter {
+    display: flex;
+}
+.newsletter__container {
+    background-color: $smoky-black;
+    color: $white;
+    padding: 40px;
+    width: 100%;
+}
+.newsletter__button{
+    align-self: center;
+    transform: rotate(90deg);
+    width: 40px;
+}
+
+@media screen and (min-width: 992px) { 
+    .newsletter__container {
+        background-color: $smoky-black;
+        color: $white;
+        padding: 40px 0 40px 80px;
+        width: 100%;
+    }
+}
