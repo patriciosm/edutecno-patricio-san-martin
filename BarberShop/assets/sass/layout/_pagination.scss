@@ -1,26 +1,26 @@
 /* Pagination Style */
-.pagination_section {
+.pagination__section {
     background-color: $light-gray;
     padding: 70px 0 50px;
 }
 
-.pagination_item {
-   &:first-child .pagination_link {
+.pagination__item {
+   &:first-child .pagination__link {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
    }
-   &:last-child .pagination_link {
+   &:last-child .pagination__link {
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
    }
 }
-.pagination_item--active .pagination_link{
+.pagination__item--active .pagination__link{
     background-color: $nickel;
     border: 1px solid $nickel;
     color: $white;
 }
 
-.pagination_link{
+.pagination__link{
     color: $raisin-black;
     &:hover {
         background-color: $nickel;
@@ -28,6 +28,6 @@
         color: $white;
     }
     &:focus{
-        outline: 0px;
+        box-shadow: none;
     }
 }

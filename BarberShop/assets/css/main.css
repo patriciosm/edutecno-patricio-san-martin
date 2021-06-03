@@ -9962,22 +9962,30 @@ h2 {
 }
 
 /* Navigation Styles */
-.navigation_logo {
+.navigation__logo {
   width: 78px;
 }
 
-.navigation_toggler {
+.navigation__toggler {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0.4rem;
+}
+.navigation__toggler:hover {
+  outline: 1px solid #FFF;
 }
 
-.navigation_link {
+.navigation__link {
   color: #FFF;
 }
-.navigation_link:hover {
+.navigation__link:hover {
   color: #D76C69;
 }
 
-.navigation_link--active {
+.navigation__link--active {
   color: #D76C69;
 }
 
@@ -9994,23 +10002,25 @@ h2 {
   padding-bottom: 20px;
 }
 
-.hero_container {
+.hero__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 70vw;
-  height: 55vh;
+  min-height: 40%;
   color: #FFF;
   text-align: center;
 }
 
-.hero_link {
+.hero__link {
   display: block;
+  width: 42px;
   color: #FFF;
   transform: rotate(180deg);
   font-size: 30px;
 }
-.hero_link:hover {
+.hero__link:hover {
   color: #E56353;
 }
 
@@ -10019,13 +10029,15 @@ h2 {
     background-position: 100% 100%;
   }
 
-  .hero_container {
-    width: 50vw;
-    height: 55vh;
+  .hero__container {
+    width: 60vw;
+    min-height: 50%;
   }
 
-  .hero_link {
+  .hero__link {
+    width: 98px;
     font-size: 70px;
+    margin-top: 30px;
   }
 }
 /* Article Styles */
@@ -10033,27 +10045,19 @@ h2 {
   padding: 50px 0 50px;
 }
 
-.article_date {
+.article__date {
   font-family: "Playfair Display", serif;
   font-weight: 900;
 }
 
-.article_social {
+.article__social {
   padding: 10px 0 30px;
   text-align: center;
 }
 
-.article_button {
-  margin: 0 5px;
-}
-
 @media screen and (min-width: 768px) {
-  .article_social {
+  .article__social {
     text-align: left;
-  }
-
-  .article_button {
-    margin-right: 20px;
   }
 }
 /* Author Styles */
@@ -10062,16 +10066,16 @@ h2 {
   padding: 50px 0 60px;
 }
 
-.author_card {
+.author__card {
   border: 0;
   text-align: center;
 }
 
-.author_thumbnail {
+.author__thumbnail {
   margin: 0 auto;
 }
 
-.author_name {
+.author__name {
   font-family: "Playfair Display", serif;
   font-style: italic;
   color: #121619;
@@ -10080,11 +10084,11 @@ h2 {
   font-size: 30px;
 }
 
-.author_email {
+.author__email {
   font-size: 18px;
 }
 
-.author_description {
+.author__description {
   display: none;
 }
 
@@ -10093,45 +10097,45 @@ h2 {
     padding: 70px 0 80px;
   }
 
-  .author_card {
+  .author__card {
     text-align: left;
   }
 
-  .author_description {
+  .author__description {
     display: block;
   }
 }
 /* Pagination Style */
-.pagination_section {
+.pagination__section {
   background-color: #D1D1D1;
   padding: 70px 0 50px;
 }
 
-.pagination_item:first-child .pagination_link {
+.pagination__item:first-child .pagination__link {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-.pagination_item:last-child .pagination_link {
+.pagination__item:last-child .pagination__link {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.pagination_item--active .pagination_link {
+.pagination__item--active .pagination__link {
   background-color: #6C6E70;
   border: 1px solid #6C6E70;
   color: #FFF;
 }
 
-.pagination_link {
+.pagination__link {
   color: #222323;
 }
-.pagination_link:hover {
+.pagination__link:hover {
   background-color: #6C6E70;
   border: 1px solid #6C6E70;
   color: #FFF;
 }
-.pagination_link:focus {
-  outline: 0px;
+.pagination__link:focus {
+  box-shadow: none;
 }
 
 /* Footer Styles */
@@ -10142,7 +10146,7 @@ h2 {
   padding: 50px 0;
 }
 
-.footer_logo {
+.footer__logo {
   width: 122px;
 }
 
@@ -10164,9 +10168,17 @@ h2 {
   border-color: #D1D1D1;
 }
 
+.button__default {
+  margin: 0 5px;
+}
+
 @media screen and (min-width: 768px) {
   .button {
     font-size: 16px;
+  }
+
+  .button__default {
+    margin-right: 20px;
   }
 }
 /* Thumbnails Styles */
@@ -10175,7 +10187,7 @@ h2 {
   height: 133px;
 }
 
-.thumbnail_image {
+.thumbnail__image {
   width: 100%;
   border-radius: 50%;
   border: 2px solid #D1D1D1;

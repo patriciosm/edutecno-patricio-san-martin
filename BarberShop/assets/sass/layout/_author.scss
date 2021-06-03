@@ -4,16 +4,16 @@
     padding: 50px 0 60px;
 }
 
-.author_card{
+.author__card{
     border: 0;
     text-align: center;
 }
 
-.author_thumbnail {
+.author__thumbnail {
     margin: 0 auto;
 }
 
-.author_name {
+.author__name {
     font-family: $playfair;
     font-style: italic;
     color: $eerie-black;
@@ -22,11 +22,11 @@
     font-size: $x-large;
 }
 
-.author_email {
+.author__email {
     font-size: $large;
 }
 
-.author_description {
+.author__description {
     display: none;
 }
 
@@ -35,11 +35,11 @@
         padding: 70px 0 80px;
     }
 
-    .author_card {
+    .author__card {
         text-align: left;
     }
     
-    .author_description {
+    .author__description {
         display: block;
     }
 }

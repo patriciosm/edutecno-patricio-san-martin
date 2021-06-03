@@ -3,26 +3,18 @@
    padding: 50px 0 50px;
 }
 
-.article_date {
+.article__date {
     font-family: $playfair;
     font-weight: $font-black;
 }
 
-.article_social {
+.article__social {
     padding: 10px 0 30px;
     text-align: center;
 }
 
-.article_button {
-    margin: 0 5px;
-}
-
 @media screen and (min-width: 768px) {
-    .article_social {
+    .article__social {
         text-align: left;
-    }
-
-    .article_button {
-        margin-right: 20px;
     }
 }

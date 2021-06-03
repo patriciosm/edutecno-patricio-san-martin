@@ -17,9 +17,15 @@
         border-color: $light-gray;
     }
 }
+.button__default {
+    margin: 0 5px;
+}
 
 @media screen and (min-width: 768px) {
     .button {
         font-size: $medium;
+    }
+    .button__default {
+        margin-right: 20px;
     }
 }

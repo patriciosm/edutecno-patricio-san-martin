@@ -11,18 +11,20 @@
     padding-bottom: 20px;
 }
 
-.hero_container {
+.hero__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width: 70vw;
-    height: 55vh;
+    min-height: 40%;
     color: $white;
     text-align: center;
 }
 
-.hero_link {
+.hero__link {
     display: block;
+    width: 42px;
     color: $white;
     transform: rotate(180deg);
     font-size: $x-large;
@@ -36,12 +38,14 @@
         background-position: 100% 100%;
     }
 
-    .hero_container {
-        width: 50vw;
-        height: 55vh;
+    .hero__container {
+        width: 60vw;
+        min-height: 50%;
     }
 
-    .hero_link {
+    .hero__link {
+        width: 98px;
         font-size: $xx-large;
+        margin-top: 30px;
     }
 }
