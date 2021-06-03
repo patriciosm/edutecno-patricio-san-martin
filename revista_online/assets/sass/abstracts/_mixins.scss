@@ -1,0 +1,6 @@
+//Mixins
+@mixin borderSpacing {
+    border-bottom: 1px solid $smoky-black;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}

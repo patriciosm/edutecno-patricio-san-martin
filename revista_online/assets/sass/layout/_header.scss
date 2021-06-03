@@ -1,0 +1,30 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid $smoky-black;
+}
+.navigation__list {
+    display: flex;
+}
+.navigation__item:first-child{
+    display: none;
+}
+.navigation__link {
+    color: $olympic;
+    font-family: $roboto-slab;
+    font-weight: $semi-bold;
+    display: block;
+    margin: .3rem .8rem;
+    &:hover {
+        color: $sapphire;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navigation__item:first-child{
+        display: block;
+    }
+}

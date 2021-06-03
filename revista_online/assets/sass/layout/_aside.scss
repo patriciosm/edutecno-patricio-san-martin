@@ -1,0 +1,18 @@
+/* Aside Style */
+.aside {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .aside {
+        display: block;
+        padding: 0 20px 0 15px;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .aside {
+        width: 30%;
+    }
+}

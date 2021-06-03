@@ -1,0 +1,15 @@
+/* Inputs Styles */
+.input-text {
+    width: 120px;
+    border: 1px solid $smoky-black;
+    padding: .22rem .5rem;
+}
+.input-text--rounded {
+    border-radius: .7rem;
+}
+
+@media screen and (min-width: 576px) {
+    .input-text {
+        width: auto;
+    }
+}

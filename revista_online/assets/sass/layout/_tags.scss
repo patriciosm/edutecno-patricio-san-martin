@@ -1,0 +1,24 @@
+/* Tags Styles */
+.tags {
+    @include borderSpacing;
+}
+.tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.tags__item {
+    margin: 5px;
+}
+.tags__link {
+    background-color: $olympic;
+    color: $white;
+    padding: .2rem .5rem;
+    &:hover {
+        background-color: $sapphire;
+    }
+    &:focus {
+        background-color: $baby-blue;
+        color: $sapphire;
+    }
+}

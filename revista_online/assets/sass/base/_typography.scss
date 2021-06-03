@@ -1,0 +1,23 @@
+/* Typography Styles */
+body {
+    font-family: $nunito;
+    font-size: $medium;
+    font-weight: $light;
+}
+h1, h2, h3, h4 {
+    font-family: $roboto-slab;
+}
+h1 {
+    font-size: $x-large;
+}
+h2 {
+    font-size: $large;
+}
+@media screen and (min-width: 576px) {
+    h1 {
+        font-size: $xx-large;
+    }
+    h2 {
+        font-size: $x-large;
+    }
+}

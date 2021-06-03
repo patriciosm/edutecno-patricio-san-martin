@@ -1,0 +1,43 @@
+/* Post Styles */
+
+/* Main Posts */
+.post {
+    width: 100%;
+    padding: 0 10px 20px;
+}
+.post__title {
+    font-size: $large;
+}
+.post__image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 576px) {
+    .post {
+        width: calc(100% / 2);
+    }
+    .post__image {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .post {
+        width: calc(100% / 3);
+    }
+} 
+
+/* Featured Posts */
+.post-featured {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+.post-featured__title {
+    font-size: $medium;
+}
+.post-featured__image {
+    width: 100%;
+}

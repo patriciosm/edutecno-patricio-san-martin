@@ -1,0 +1,24 @@
+/* Button Styles */
+.button {
+    padding: .15rem .5rem;
+    font-family: $roboto-slab;
+    font-weight: $semi-bold;
+}
+.button--primary {
+    background-color: $royal;
+    color: $white;
+    border: 1px solid $squash;
+    cursor: pointer;
+    &:hover {
+        background-color: $squash;
+    }
+    &:focus {
+        background-color: $melon;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .button {
+        padding: .15rem 1rem;
+    }
+}
