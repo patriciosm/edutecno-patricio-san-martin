@@ -69,7 +69,6 @@ h3 {
 .logo {
   background-color: #0C0910;
   text-align: center;
-  padding: 1.8rem 1rem;
 }
 
 .logo__link {
@@ -78,6 +77,8 @@ h3 {
   font-family: "Old Standard TT", serif;
   font-weight: 700;
   font-size: 20px;
+  padding: 1.8rem 1rem;
+  display: block;
 }
 
 .navigation {
@@ -130,7 +131,8 @@ h3 {
   display: none;
   background-color: #FFF;
   margin-top: 28px;
-  text-align: center;
+  text-align: right;
+  padding-right: 30px;
 }
 
 .navigation__item {
@@ -147,12 +149,9 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
-  .logo {
-    padding: 2.2rem 1.2rem;
-  }
-
   .logo__link {
     font-size: 30px;
+    padding: 2.2rem 1.2rem;
   }
 
   .navigation {
@@ -164,6 +163,10 @@ h3 {
 
   .navigation__label-toggler {
     display: none;
+  }
+
+  .navigation__toggler:checked ~ .navigation__list {
+    display: flex;
   }
 
   .navigation__list {
