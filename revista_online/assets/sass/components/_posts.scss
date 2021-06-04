@@ -1,10 +1,6 @@
 /* Post Styles */
 
 /* Main Posts */
-.post {
-    width: 100%;
-    padding: 0 10px 20px;
-}
 .post__title {
     font-size: $large;
 }
@@ -15,19 +11,16 @@
 }
 
 @media screen and (min-width: 576px) {
-    .post {
-        width: calc(100% / 2);
+    .post__image {
+        height: 300px;
     }
+}
+
+@media screen and (min-width: 768px) {
     .post__image {
         height: auto;
     }
 }
-
-@media screen and (min-width: 992px) {
-    .post {
-        width: calc(100% / 3);
-    }
-} 
 
 /* Featured Posts */
 .post-featured {

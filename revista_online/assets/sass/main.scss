@@ -5,16 +5,14 @@
 // Vendors
 // Base
 @import 'base/reset';
-@import 'base/grid';
 @import 'base/base';
 @import 'base/typography';
 // Layout
 @import 'layout/header';
-@import 'layout/main-section';
+@import 'layout/grid';
 @import 'layout/aside';
 @import 'layout/about';
 @import 'layout/tags';
-@import 'layout/featured';
 @import 'layout/newsletter';
 @import 'layout/footer';
 // Components
