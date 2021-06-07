@@ -1,0 +1,19 @@
+// main.scss Manifest Style
+// Vendors
+@import 'vendors/bootstrap_v4.5.3/bootstrap';
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+// Base
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+// Layout
+@import 'layout/header';
+@import 'layout/user';
+@import 'layout/main-section';
+// Components
+@import 'components/buttons';
+@import 'components/videos';
+// Pages
+// Themes

@@ -1,0 +1,30 @@
+/* Button Styles */
+.button {
+    color: $white;
+    border: none;
+    padding: .3rem 1rem;
+    margin: 0 5px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.button__default {
+    background-color: $baby-blue;
+    &:hover {
+        background-color: $carolina;
+    }
+    &:focus {
+        background-color: $powder;
+    }
+}
+
+.button__alternative {
+    background-color: $imperial-red;
+    &:hover {
+        background-color: $crimsom;
+    }
+    &:focus {
+        background-color: $desire;
+    }
+}

@@ -1,0 +1,67 @@
+/* User Styles*/
+.user {
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
+.user__banner {
+    background-image: url('../images/image-banner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.user__box {
+    display: flex;
+    justify-content: center;
+}
+.user__profile {
+    display: flex;
+    align-items: center;
+}
+.user__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.user__name {
+    font-size: $xx-large;
+    font-weight: $bold;
+    color: $raisin-black;
+    margin-bottom: 3px;
+}
+.user__followers {
+    font-size: $medium;
+    margin-bottom: 0;
+}
+.user__buttons {
+    align-self: center;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .user {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $light-gray;
+    }
+    .user__box {
+        justify-content: space-between;
+    }
+    .user__banner {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .user__avatar {
+        width: 60px;
+        height: 60px;
+        margin-right: 40px;
+    }
+    .user__name {
+        margin-bottom: 0;
+    }
+    .user__buttons {
+        display: block;
+    }
+}

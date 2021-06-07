@@ -1,0 +1,15 @@
+/* Main Section */
+.main__title {
+    color: $raisin-black;
+    margin-bottom: 40px;
+    font-family: $poppins;
+    font-size: $xx-large;
+    font-weight: $bold;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .main__title {
+        text-align: left;
+    }
+}

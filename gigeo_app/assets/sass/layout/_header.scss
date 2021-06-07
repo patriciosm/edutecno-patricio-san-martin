@@ -1,0 +1,104 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.logo__link {
+    color: $raisin-black;
+    font-family: $poppins;
+    font-size: $xxxx-large;
+    font-weight: $bold;
+    &:hover {
+        color: $imperial-red;
+    }
+}
+.logo__sup {
+    font-size: $x-small;
+    font-weight: $regular;
+    top: -2.6em;
+    left: .5em;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+/* Button Small Device */
+
+.navigation__toggler{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    width: 30px;
+    cursor: pointer;
+    span{
+        background-color: $raisin-black;
+        border-radius: 10px;
+        height: 4px;
+        margin: 3px 0;
+        transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+    &:hover {
+        span {
+            background-color: $imperial-red;
+        }
+    }
+}
+.navigation__toggler {
+    &:hover span:nth-of-type(1){
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(7px,6px);
+    }
+    &:hover span:nth-of-type(2){
+        transform-origin:top;
+        transform:rotatez(-45deg);
+    }
+    &:hover span:nth-of-type(3){
+        transform-origin:bottom;
+        width:100%;
+        transform: translate(0px,-12px) rotatez(45deg);
+    }
+    &:checked ~ .navigation__list {
+        display: block;
+    }
+}
+
+.navigation__list {
+    display: flex;
+    margin-bottom: 0;
+}
+.navigation__item {
+    padding: .5rem .8rem;
+    &:nth-last-child(n+2) {
+        display: none;
+    }
+}
+.navigation__link {
+    color: $raisin-black;
+    font-size: $xx-large;
+    display: block;
+    &:hover {
+        color: $imperial-red;
+        animation-name: rebote;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes rebote {
+    0% {margin-top: 0px}
+    30% {margin-top:-10px}
+    45% {margin-top: 0px}
+    55% {margin-top: -4px}
+    65% {margin-top: 0px}
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 10px 0;
+    }
+    .navigation__item:nth-last-child(n+2) {
+        display: block;
+    }
+}
