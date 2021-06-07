@@ -11,3 +11,9 @@
     margin-bottom: 0;
     color: $raisin-black;
 }
+.video__link {
+    color: $raisin-black;
+    &:hover {
+        color: $carolina;
+    }
+}

@@ -10184,4 +10184,11 @@ body {
   color: #222323;
 }
 
+.video__link {
+  color: #222323;
+}
+.video__link:hover {
+  color: #57A0D3;
+}
+
 /*# sourceMappingURL=styles.css.map */
