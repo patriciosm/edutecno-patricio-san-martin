@@ -1,0 +1,11 @@
+/* Animations */
+@keyframes moveHorizontal {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-40px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(40px); }
+    100% { transform: translateX(0); }
+}
+@keyframes infiniteRotation {
+        100% { transform: rotate(360deg); }
+}

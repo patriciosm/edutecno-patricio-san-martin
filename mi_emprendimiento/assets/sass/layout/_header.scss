@@ -1,0 +1,182 @@
+/* Header Styles */
+.header {
+    background-color: $black;
+    color: $white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 42px;
+        position: relative;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}
+.navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    &__list {
+        display: none;
+        font-family: $poppins;
+        font-weight: $bold;
+        background-color: $black;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 65px;
+        z-index: 99;
+        padding-bottom: 10px;
+    }
+
+    &__item {
+        list-style-type: none;
+        margin: 10px;
+        text-align: right;
+    }
+
+    &__link {
+        color: $white;
+        padding: .5rem;
+
+        &:hover {
+            color: $tangerine;
+        }
+    }
+}
+
+.toggler{
+
+    &__button {
+    width: 36px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked ~ .navigation__list {
+            display:block;
+        }
+
+        &:checked + .toggler__button .toggler__label:before {
+            left: -36px;
+        }
+
+        &:checked + .toggler__button .toggler__label:after {
+            left: 36px;
+        }
+
+        &:checked + .toggler__button .toggler__label .toggler__text {
+            background-color: $tangerine;
+        }
+
+        &:checked + .toggler__button .toggler__label .toggler__text:before {
+            animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards 
+        }
+    }
+
+    &__label {
+        position: relative;
+        display: block;
+        height: 29px;
+        cursor: pointer;
+        &:before , &:after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $white;
+            content: '';
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            top: 12px;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        top: 24px;
+
+        &:before {
+            content: 'Menu';
+            position: absolute;
+            top: 5px;
+            right: 0;
+            left: 0;
+            font-weight: $bold;
+            font-size: $x-small;
+            text-align: center;
+            color: $tangerine;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .navigation{
+        &__list {
+            display: flex;
+            position: relative;
+            width: auto;
+            top: auto;
+            padding-bottom: 0;
+        }
+
+        &__item {
+            margin: 0 0 0 10px;
+        }
+
+    }
+    .toggler {
+        &__checkbox:checked ~ .navigation__list {
+            display: flex;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}
+
+/* Keyframes Animations */
+
+@keyframes moveUpThenDown {
+    0% { top: 0; }
+    50% { top: -27px; }
+    100% { top: -21px; }
+}
+@keyframes shakeWhileMovingUp {
+    0% { transform: rotateZ(0); }
+    25% { transform: rotateZ(-10deg); }
+    50% { transform: rotateZ(0); }
+    75% { transform: rotateZ(10deg); }
+    100% { transform: rotateZ(0); }
+}
+@keyframes shakeWhileMovingDown {
+    0% { transform: rotateZ(0); }
+    80% { transform: rotateZ(3deg); }
+    90% { transform: rotateZ(-3deg); }
+    100% { transform: rotateZ(0); }
+}

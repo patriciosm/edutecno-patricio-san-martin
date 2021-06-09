@@ -1,0 +1,36 @@
+/* Buttons Styles */
+.button {
+    padding: 0 .8rem;
+    border: none;
+    font-family: $poppins;
+    font-weight: $bold;
+    font-size: $small;
+    cursor: pointer;
+
+    &--default{
+        background-color: $tangerine;
+
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}
+
+.button-interaction {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: $medium;
+    margin-right: 20px;
+    cursor: pointer;
+    color: $tangerine;
+
+    &:hover {
+        color: $orange;
+        font-weight: $bold;
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,55 @@
+/* Footer Styles */
+.footer {
+    background-color: $black;
+    color: $white;
+    font-family: $poppins;
+    padding: 20px 0;
+    text-align: center;
+
+    &__form {
+        display: flex;
+    }
+    
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 10px 0;
+    }
+    
+    &__item {
+        list-style-type: none;
+        margin: 0 0 10px 0;
+    }
+    
+    &__link {
+        color: $white;
+        padding: .3rem;
+
+        &:hover {
+            color: $tangerine;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .footer {
+        text-align: left;
+    }
+    .footer-nav {
+        flex-direction: row;
+
+        &__list {
+            flex-direction: row;
+            margin: 0 20px 0 0;
+        }
+        &__item {
+            margin: 0 0 0 10px;
+        }
+    }
+}

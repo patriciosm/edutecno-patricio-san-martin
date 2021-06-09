@@ -1,0 +1,117 @@
+/* About Styles */
+.about {
+    padding: 20px;
+
+    &__image {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: 2px solid $light-gray;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-family: $poppins;
+        font-size: $x-large;
+        margin-bottom: 30px;
+        text-align: center;
+
+        &--dark {
+            background-color: $black;
+            color: $white;
+            padding: .5rem 0;
+            font-size: $large;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: 40px;
+        padding-left: 5px;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    &__item:before {
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 9px;
+        background-color: $tangerine;
+        width: 8px;
+        height: 8px;
+        text-align: center;
+        transform: rotate(0deg);
+    }
+
+    &__item:after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background-color: $tangerine;
+        transform: rotate(45deg);
+    }
+
+    &__link {
+        color: $tangerine;
+        
+        &:hover {
+            color: $orange;
+            font-style: italic;
+            font-weight: $bold;
+        }
+    }
+
+    &__animation {
+        width: 300px;
+        margin: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .about {
+        &__description {
+            text-align: left;
+        }
+    }
+}
+
+.monitor {
+    animation: moveHorizontal 1.5s linear infinite normal;
+}
+.engranaje {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: infiniteRotation 2.5s linear infinite normal;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    &__link {
+        color: $tangerine;
+        font-size: $x-large;
+        margin: 0 10px;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
