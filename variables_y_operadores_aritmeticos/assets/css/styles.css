@@ -1,0 +1,43 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #555;
+}
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+h3{
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.contenedor__imagen {
+    width: 100%;
+    max-width: 950px;
+}
+img {
+    width: 100%;
+}
+ol>li {
+    margin-bottom: 40px;
+}
+ul {
+    margin-bottom: 10px;
+}
+button {
+    background-color: #4682B4;
+    color: #FFF;
+    border: none;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0E4D92;
+}
+.respuesta {
+    font-weight: 500;
+}
