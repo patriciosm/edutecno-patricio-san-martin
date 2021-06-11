@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Patricio San Martín">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachipun</title>
+    <style>
+        .container {
+            padding: 20px 40px;
+        }
+        .button {
+            background-color: #F05E23;
+            color: #FFF;
+            font-size: 30px;
+            padding: .5rem 1rem;
+            border: none;
+            cursor: pointer;
+            margin: 20px auto 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cachipun</h1>
+        <h3>Instrucciones</h3>
+        <ol>
+            <li>Debes ingresar un número de partidas a jugar (solo números positivos)</li>
+            <li>Debes ingresar una opción:
+                <ul>
+                    <li>0 para Papel</li>
+                    <li>1 para Tijeras</li>
+                    <li>2 para Piedra</li>
+                </ul>
+            </li>
+            <li>Por cada partida se te mostrará el resultado (en la consola se muestra el histórico de cada partida)</li>
+            <li>Terminadas todas las partidas, el sistema te mostrará si ganaste, empataste o perdiste (en la consola te mostrará un resumen de partidas ganadas, empatadas y perdidas.</li>
+        </ol>
+        <button class="button" id="jugar" type="button">Jugar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
