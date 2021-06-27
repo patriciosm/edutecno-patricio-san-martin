@@ -18,13 +18,14 @@ body {
 h1,
 h3,
 th,
-span {
+.negrita {
   font-weight: 500;
 }
 
 h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
+  line-height: 1.3em;
 }
 h3 {
   font-size: 1.4rem;

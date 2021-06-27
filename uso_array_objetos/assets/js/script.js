@@ -1,5 +1,6 @@
+// Declaración del Objeto
 let especialidades = {
-    Radiologia: [{
+    Radiología: [{
         hora: '11:00',
         especialista: 'Ignacio Schulz',
         paciente: 'Francisca Rojas',
@@ -34,7 +35,7 @@ let especialidades = {
         rut: '14989389-K',
         prevision: 'Fonasa'
     }],
-    Traumatologia: [{
+    Traumatología: [{
         hora: '8:00',
         especialista: 'María Paz Altuzarra',
         paciente: 'Paula Sanchez',
@@ -127,7 +128,7 @@ let especialidades = {
     }]
 };
 
-
+// Muestra subtitulo, datos en la tabla, y párrafo de acuerdo a opción seleccionada
 const mostrarDatos = (especialidad) => {
     let tablaDatos = document.getElementById("tabla-datos");
     let atenciones = document.getElementById("atenciones");
@@ -146,20 +147,27 @@ const mostrarDatos = (especialidad) => {
             <td>${especialidades[especialidad][i].prevision}</td>
             </tr>`;
     }
-    subtitulo.innerHTML = `Listado de atenciones ${especialidad}`;
+    subtitulo.innerHTML = `Listado de atenciones de ${especialidad}`;
     tablaDatos.innerHTML = tabla;
-    atenciones.innerHTML = `<span>Primera atención:</span> ${especialidades[especialidad][0].paciente} - ${especialidades[especialidad][0].prevision} | <span>Última atención:</span> ${especialidades[especialidad][longitud - 1].paciente} - ${especialidades[especialidad][longitud - 1].prevision}`;
+    atenciones.innerHTML = `<span class="negrita">Primera atención:</span> ${especialidades[especialidad][0].paciente} - ${especialidades[especialidad][0].prevision} | <span class="negrita">Última atención:</span> ${especialidades[especialidad][longitud - 1].paciente} - ${especialidades[especialidad][longitud - 1].prevision}`;
 }
 
-let select_especialidad = document.getElementById("select_especialidad");
-let options = "<option value=''>Especialidad</option>";
-for(propiedad in especialidades) {
-    options += `<option value='${propiedad}'>${propiedad}</option>`;
-}
-select_especialidad.innerHTML = options;
+const manejaOpciones = () => {
+    let select_especialidad = document.getElementById("select_especialidad");
 
-select_especialidad.addEventListener('change', function(){
-    if(this.value !== "") {
-        mostrarDatos(this.value);
+    // Se crean y agregan opciones al select
+    let options = "<option value=''>Especialidad</option>";
+    for(propiedad in especialidades) {
+        options += `<option value='${propiedad}'>${propiedad}</option>`;
     }
-});
+    select_especialidad.innerHTML = options;
+    
+    // Se monitorea el select
+    select_especialidad.addEventListener('change', function(){
+        if(this.value !== "") {
+            mostrarDatos(this.value);
+        }
+    });
+}
+
+manejaOpciones();
