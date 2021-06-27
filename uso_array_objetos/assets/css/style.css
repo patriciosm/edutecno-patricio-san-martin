@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.contenedor {
+  padding: 30px;
+}
+
+h1,
+h3,
+th,
+span {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+select {
+  margin-bottom: 20px;
+  background-color: #eef;
+  padding: 0.1rem 0.3rem;
+}
+table {
+  margin-bottom: 20px;
+}
+th {
+  text-align: left;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 0.2rem 0.6rem;
+}

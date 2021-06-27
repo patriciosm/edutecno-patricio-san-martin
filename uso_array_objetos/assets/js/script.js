@@ -148,7 +148,7 @@ const mostrarDatos = (especialidad) => {
     }
     subtitulo.innerHTML = `Listado de atenciones ${especialidad}`;
     tablaDatos.innerHTML = tabla;
-    atenciones.innerHTML = `Primera atención: ${especialidades[especialidad][0].paciente} - ${especialidades[especialidad][0].prevision} | Última atención: ${especialidades[especialidad][longitud - 1].paciente} - ${especialidades[especialidad][longitud - 1].prevision}`;
+    atenciones.innerHTML = `<span>Primera atención:</span> ${especialidades[especialidad][0].paciente} - ${especialidades[especialidad][0].prevision} | <span>Última atención:</span> ${especialidades[especialidad][longitud - 1].paciente} - ${especialidades[especialidad][longitud - 1].prevision}`;
 }
 
 let select_especialidad = document.getElementById("select_especialidad");
