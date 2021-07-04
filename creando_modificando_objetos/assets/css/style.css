@@ -34,6 +34,11 @@ h1 {
   border: 1px solid #999;
   padding: 0.35rem 0.5rem;
 }
+.input-text::placeholder {
+  font-style: italic;
+  color: #999;
+}
+
 table {
   margin-bottom: 30px;
   border-collapse: collapse;
