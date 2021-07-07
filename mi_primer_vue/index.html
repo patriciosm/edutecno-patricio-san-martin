@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patricio San Martín">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Styles -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <title>Mi Primer Vue</title>
+</head>
+<body>
+    <div class="container py-4">
+        <h1>Tabla de Usuarios</h1>
+        <table class="table table-striped table-bordered mt-4">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">RUN</th>
+                <th scope="col">Nacimiento</th>
+                <th scope="col">Edad</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-vue">
+              <tr v-for="(user , index) in users">
+                <th scope="row">{{ index + 1 }}</th>
+                <td>{{ user.nombre }}</td>
+                <td>{{ user.apellido }}</td>
+                <td>{{ user.run }}</td>
+                <td>{{ user.nacimiento }}</td>
+                <td>{{ user.edad }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#tabla-vue',
+            data: {
+                users: [
+                    {nombre: "Jose" ,apellido: "Pérez" ,run: "123456-2" ,nacimiento: "12-04-67" ,edad: 52},
+                    {nombre: "María" ,apellido: "Rodriguez" ,run:"654321-1" ,nacimiento: "30-11-90" ,edad: 29},
+                    {nombre: "Manuel" ,apellido: "Patiño" ,run: "14223456-6" ,nacimiento: "02-12-59" ,edad: 60},
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
