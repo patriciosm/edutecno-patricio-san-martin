@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patricio San Martín">
+    <title>Sistema de Clientes</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <h1>Cálculo del Impuesto</h1>
+            <div>
+                <div class="control-form">
+                    <label>Nombre del cliente</label>
+                    <input id="nombre" class="input-text" type="text">
+                    <div id="error-nombre" class="error"></div>
+                </div>
+                <div class="control-form">
+                    <label>Monto bruto anual</label>
+                    <input id="montoBrutoAnual" class="input-text" type="text">
+                    <div id="error-monto-bruto" class="error"></div>
+                </div>
+                <div class="control-form">
+                    <label>Deducciones</label>
+                    <input id="deducciones" class="input-text" type="text">
+                    <div id="error-deducciones" class="error"></div>
+                </div>
+            </div>
+            <div>
+                <button id="calcular" class="btn" type="button">Calcular</button>
+            </div>
+        </div>
+        <div>
+            <p id="textoImpuesto" class="respuesta"></p>
+        </div>
+    </div>
+    <script src="assets/js/src/main.js" type="module"></script>
+</body>
+</html>
