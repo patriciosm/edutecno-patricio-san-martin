@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Videos - Desafío</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mx-auto">
+            <img class="img-fluid" src="assets/img/107735.png" alt="video">
+            <div class="d-inline-block">
+                <h2 class="font-weight-bold my-5 ml-3">Sugerencias de Vídeos</h2>
+            </div>
+        </div>
+        <div id="accordionExample" class="accordion">
+            <div class="card">
+              <div id="headingOne" class="card-header">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" data-target="#collapseOne" data-toggle="collapse" type="button" aria-controls="collapseOne" aria-expanded="true">
+                    Música
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" data-parent="#accordionExample" aria-labelledby="headingOne">
+                <div class="card-body text-center">
+                  <iframe id="musica" title="YouTube video player" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="headingTwo" class="card-header">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" data-target="#collapseTwo" data-toggle="collapse" type="button" aria-controls="collapseTwo" aria-expanded="false">
+                    Película
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordionExample" aria-labelledby="headingTwo">
+                <div class="card-body text-center">
+                  <iframe id="peliculas" title="YouTube video player" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="headingThree" class="card-header">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" data-target="#collapseThree" data-toggle="collapse" type="button" aria-controls="collapseThree" aria-expanded="false">
+                    Serie
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordionExample" aria-labelledby="headingThree">
+                <div class="card-body text-center">
+                  <iframe id="series" title="YouTube video player" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
