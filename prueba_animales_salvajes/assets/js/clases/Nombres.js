@@ -5,8 +5,8 @@ class Leon extends Animal{
         super(nombre, edad, img, comentarios, sonido);
     }
 
-    rugir(){
-
+    rugir(audio){
+        audio.play();
     }
 }
 
@@ -15,8 +15,8 @@ class Lobo extends Animal{
         super(nombre, edad, img, comentarios, sonido);
     }
 
-    aullar(){
-
+    aullar(audio){
+        audio.play();
     }
 }
 
@@ -25,8 +25,8 @@ class Oso extends Animal{
         super(nombre, edad, img, comentarios, sonido);
     }
 
-    grunir(){
-
+    grunir(audio){
+        audio.play();
     }
 }
 
@@ -35,8 +35,8 @@ class Serpiente extends Animal{
         super(nombre, edad, img, comentarios, sonido);
     }
 
-    sisear(){
-
+    sisear(audio){
+        audio.play();
     }
 }
 
@@ -45,8 +45,8 @@ class Aguila extends Animal{
         super(nombre, edad, img, comentarios, sonido);
     }
 
-    chillar(){
-        
+    chillar(audio){
+        audio.play();
     }
 }
 
