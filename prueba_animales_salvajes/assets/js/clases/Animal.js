@@ -10,6 +10,7 @@ class Animal{
         this.getEdad = () => _edad;
         this.getImg = () => _img;
         this.getSonido = () => _sonido; 
+        this.getComentarios = () => _comentarios;
         this.setComentarios = (comentarios) => _comentarios = comentarios;
     }
 
@@ -27,6 +28,10 @@ class Animal{
 
     get sonido(){
         return this.getSonido();
+    }
+
+    get comentarios(){
+        return this.getComentarios();
     }
 
     set comentarios(nuevosComentarios){

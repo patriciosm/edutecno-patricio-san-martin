@@ -49,7 +49,7 @@ const reloadTable = () => {
     tablaAnimales.innerHTML = '<div class="row px-2">';
     animales.forEach((a, i) => {
         tablaAnimales.innerHTML += `<div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                        <img src="${a.img}" class="img-fluid animal-thumbnail" alt="${a.nombre}">
+                                        <img src="${a.img}" class="img-fluid animal-thumbnail" alt="${a.nombre}" onclick="mostrarFicha(${i})">
                                         <button class="btn-play" onclick='playSonido(${i})' type="button"><img src="./assets/imgs/audio.svg"></button>
                                         <audio id="sonido${i}" src="${a.sonido}"></audio>
                                     </div>`;
@@ -74,4 +74,16 @@ window.playSonido = (i) => {
                     break;
         default: break;
     }
+}
+
+window.mostrarFicha = (i) => {
+    const animal = animales[i];
+    const ficha = document.querySelector('.modal-body');
+    ficha.innerHTML = '';
+    ficha.innerHTML = `<div class="text-center text-white">
+                            <div class="mb-3"><img class="img-fluid" src="${animal.img}"></div>
+                            <div><p>${animal.edad}</p></div>
+                            <div><p>${animal.comentarios}</p></div>
+                        </div>`;
+    $("#exampleModal").modal('toggle');
 }
