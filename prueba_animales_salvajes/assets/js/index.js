@@ -46,20 +46,22 @@ document.getElementById('btnRegistrar').addEventListener('click', () => {
 
 const reloadTable = () => {
     const tablaAnimales = document.getElementById('Animales');
-    tablaAnimales.innerHTML = '<div class="row px-2">';
+    tablaAnimales.classList.add('row');
+    tablaAnimales.innerHTML = '';
     animales.forEach((a, i) => {
-        tablaAnimales.innerHTML += `<div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                        <img src="${a.img}" class="img-fluid animal-thumbnail" alt="${a.nombre}" onclick="mostrarFicha(${i})">
-                                        <button class="btn-play" onclick='playSonido(${i})' type="button"><img src="./assets/imgs/audio.svg"></button>
-                                        <audio id="sonido${i}" src="${a.sonido}"></audio>
+        tablaAnimales.innerHTML += `<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                        <div class="mb-3">
+                                            <img src="${a.img}" class="img-fluid animal-thumbnail" alt="${a.nombre}" onclick="mostrarFicha(${i})">
+                                            <button class="btn-play" onclick='playSonido(${i})' type="button"><img src="./assets/imgs/audio.svg"></button>
+                                        </div>
                                     </div>`;
     });
-    tablaAnimales.innerHTML += '</div>';
 }
 
 window.playSonido = (i) => {
     const animal = animales[i];
-    const audio = document.getElementById(`sonido${i}`);
+    const audio = document.getElementById('player');
+    audio.setAttribute('src', animal.sonido);
     
     switch(animal.nombre){
         case 'Leon': animal.rugir(audio);

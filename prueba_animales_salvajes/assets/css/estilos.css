@@ -9,7 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  padding: 100px;
+  padding: 40px 15px;
 }
 
 /* Formulario */
@@ -63,5 +63,6 @@ body {
 /* Modal */
 
 .modal-dialog {
-  max-width: 85% !important;
+  max-width: 500px !important;
+  margin: 10px auto;
 }
