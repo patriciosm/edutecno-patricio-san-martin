@@ -1,5 +1,5 @@
 {
-  "name": "desafio_toDoList",
+  "name": "desafio_todolist",
   "version": "1.0.0",
   "description": "",
   "main": ".babelrc.js",
@@ -22,5 +22,9 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "bootstrap-vue": "^2.21.2"
   }
 }
