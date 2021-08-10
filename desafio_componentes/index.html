@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Patricio San Martín">
+  <title>Desafio componentes</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      background-image: url('assets/images/cropped-RM_page-header_background1-3.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Carter One', cursive;
+    }
+    .container {
+      padding: 20px 40px;
+    }
+    .ficha{
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .contenedor-imagen {
+      width: 120px;
+      margin-right: 30px;
+    }
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+    .nombre {
+      align-self: center;
+      color: lightgreen;
+      font-size: 20px;
+    }
+  </style>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <mi-componente></mi-componente>
+  </div>
+
+  <script>
+    Vue.component('mi-componente',{
+      data() {
+        return {
+          personajes: [
+            {nombre: 'Rick Sanchez', src: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'},
+            {nombre: 'Morty Smith', src: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'},
+            {nombre: 'Summer Smith', src: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'},
+            {nombre:'Beth Smith', src:'https://rickandmortyapi.com/api/character/avatar/4.jpeg'},
+            {nombre: 'Jerry Smith', src: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg'},
+            {nombre: 'Abadango Cluster Princess', src: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg'},
+            {nombre: 'Abradolf Lincler', src: 'https://rickandmortyapi.com/api/character/avatar/7.jpeg'},
+            {nombre: 'Adjudicator Rick', src: 'https://rickandmortyapi.com/api/character/avatar/8.jpeg'},
+            {nombre: 'Agency Director', src: 'https://rickandmortyapi.com/api/character/avatar/9.jpeg'},
+            {nombre: 'Alan Rails', src: 'https://rickandmortyapi.com/api/character/avatar/10.jpeg'},
+            {nombre: 'Albert Einstein', src: 'https://rickandmortyapi.com/api/character/avatar/11.jpeg'},
+            {nombre: 'Alexander', src: 'https://rickandmortyapi.com/api/character/avatar/12.jpeg'}
+          ]
+        }
+      },
+      template: '<div class="container"><div class="ficha" v-for="(personaje , index) in personajes"><div class="contenedor-imagen"><img :src="personaje.src"></div><div class="nombre">{{ personaje.nombre }}</div></div></div>'
+    });
+    var app = new Vue({
+      el: '#app',
+    });
+  </script>
+</body>
+</html>
