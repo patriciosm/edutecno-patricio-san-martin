@@ -13,12 +13,12 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   store.dispatch("fetchUser", user);
+  new Vue({
+    router,
+    app,
+    store,
+    vuetify,
+    render: h => h(App)
+  }).$mount('#app')
 });
 
-new Vue({
-  router,
-  app,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')

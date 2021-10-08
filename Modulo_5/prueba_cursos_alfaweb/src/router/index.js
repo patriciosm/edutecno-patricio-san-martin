@@ -8,10 +8,6 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/login'
-  },
-  {
-    path: '/home',
     name: 'Home',
     component: Home,
     meta: {
@@ -64,7 +60,7 @@ router.beforeEach((to, from, next) => {
     next('/login');
   }
   else if( user && !authRequired ){
-    next('/home');
+    next('/');
   }
   else {
     next();
