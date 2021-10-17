@@ -39,7 +39,7 @@ export default {
             this.$emit('clickEditarOpinion', opinion)
         },
         eliminarOpinion(id){
-            this.$store.commit("DELETE_OPINION", id)
+            this.$store.dispatch("delete_opinion", id)
         }
     }
 }

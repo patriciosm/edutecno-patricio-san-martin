@@ -34,7 +34,7 @@ export default {
     methods: {
       addOpinion(){
         if(this.nombre != '' && this.opinion != '') {
-          this.$store.commit('ADD_OPINION', [this.gameName, this.usuario, this.opinion])
+          this.$store.dispatch('add_opinion', [this.gameName, this.usuario, this.opinion])
           this.usuario = '';
           this.opinion = '';
           this.modalShow = false;

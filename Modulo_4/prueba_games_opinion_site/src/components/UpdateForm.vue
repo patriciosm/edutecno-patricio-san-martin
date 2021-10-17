@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         actualizar() {
-            this.$store.commit("UPDATE_OPINION", [this.id, this.usuario, this.comentario])
+            this.$store.dispatch("update_opinion", [this.id, this.usuario, this.comentario])
             this.$emit('clickActualizarOpinion');
         },
         cancelar(){
