@@ -14,7 +14,7 @@
 
       <template #modal-footer>
         <b-button class="float-right" @click="modalShow=false">Cerrar</b-button>
-        <b-button variant="primary" class="float-right" @click="addOpinion">Guardar</b-button>
+        <b-button variant="primary" class="submit float-right" @click="addOpinion">Guardar</b-button>
       </template>
 
     </b-modal>
