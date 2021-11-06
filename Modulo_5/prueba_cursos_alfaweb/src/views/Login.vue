@@ -51,6 +51,9 @@
                 >
                 Limpiar Validación
                 </v-btn>
+                <v-alert v-model="alert" dense outlined type="error" class="mt-5">
+                    Datos de acceso incorrectos
+                </v-alert>
             </v-form>
         </v-col>
     </v-row>
@@ -64,6 +67,7 @@ export default {
       valid: true,
       password: '',
       show: false,
+      alert: false,
       passwordRules: [
         v => !!v || 'La contraseña es requerida',
         v => (v && v.length >= 8) || 'La contraseña debe tener un mínimo de 8 caracteres',
@@ -81,10 +85,11 @@ export default {
                 const auth = getAuth();
                 signInWithEmailAndPassword(auth, this.email, this.password)
                 .then(() => {
-                   this.$router.push('/');
+                    this.alert = false;
+                    this.$router.push('/');
                 })
-                .catch((err) => {
-                    console.log(`Error: ${err.code}`);
+                .catch(() => {
+                    this.alert = true;
                 });
             }
         },

@@ -10,14 +10,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Navbar from '@/components/Navbar'
 export default {
   name: 'App',
   components: {
     Navbar
   },
-  data: () => ({
-    //
-  }),
+  methods: {
+    ...mapActions(['getCursos']),
+  },
+  mounted(){
+    this.getCursos();
+  }
 };
 </script>

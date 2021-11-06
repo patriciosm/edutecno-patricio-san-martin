@@ -44,6 +44,9 @@
         <v-btn color="warning" class="mt-4" @click="resetValidation">
           Limpiar Validación
         </v-btn>
+        <v-alert v-model="alert" dense outlined type="error" class="mt-5">
+          El usuario ya existe
+        </v-alert>
       </v-form>
     </v-col>
   </v-row>
@@ -57,6 +60,7 @@ export default {
     valid: true,
     password: "",
     show: false,
+    alert: false,
     passwordRules: [
       (v) => !!v || "La contraseña es requerida",
       (v) =>
@@ -75,15 +79,12 @@ export default {
       if (this.valid == true) {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, this.email, this.password)
-          .then((data) => {
+          .then(() => {
+            this.alert = false;
             this.$router.push("/");
-            data.user
-              .updateProfile({
-                displayName: this.form.name,
-              });
           })
-          .catch((err) => {
-            console.log(`Error: ${err.code}`);
+          .catch(() => {
+            this.alert = true;
           });
       }
     },
