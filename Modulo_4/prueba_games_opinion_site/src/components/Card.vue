@@ -12,7 +12,6 @@
             <li class="list-group-item">Updated: {{ formatoFecha(game.updated) }}</li>
         </ul>
         <div class="card-body text-center">
-            <!-- <b-button v-b-modal.my-modal variant="primary">Opinar</b-button> -->
             <b-button variant="primary" @click="openModal(game.name)">Opinar</b-button>
         </div>
     </div>
