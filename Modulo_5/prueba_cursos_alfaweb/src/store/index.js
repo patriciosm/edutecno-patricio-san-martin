@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app"
 import firebaseConfig from '@/configs/firebase.js'
 
 initializeApp(firebaseConfig)
-import { getFirestore , collection, getDocs, doc, deleteDoc, addDoc, Timestamp } from "firebase/firestore"
+import { getFirestore , collection, onSnapshot, doc, deleteDoc, addDoc, Timestamp } from "firebase/firestore"
 
 const db = getFirestore();
 
@@ -24,6 +24,24 @@ export default new Vuex.Store({
     },
     cursos(state){
       return state.cursos;
+    },
+    totalCupos(state){
+      return state.cursos.reduce((acum, c) => {
+        return acum + c.cupos;
+      }, 0);
+    },
+    totalInscritos(state){
+      return state.cursos.reduce((acum, c) => {
+        return acum + c.inscritos;
+      }, 0);
+    },
+    totalCursos(state){
+      return state.cursos.length;
+    },
+    totalCursosActivos(state){
+      return state.cursos.reduce((acum, c) =>{
+        return (c.terminado === false) ? acum += 1 : acum = 1;
+      }, 0);
     }
   },
   mutations: {
@@ -49,27 +67,28 @@ export default new Vuex.Store({
       }
     },
     async getCursos({commit}){
-      const querySnapshot = await getDocs(collection(db, "cursos"));
-      const cursos = [];
-      querySnapshot.forEach(doc => {
-        const curso = {
-          id: doc.id,
-          codigo: doc.data().codigo,
-          costo: doc.data().costo,
-          cupos: doc.data().cupos,
-          descripcion: doc.data().descripcion,
-          duracion: doc.data().duracion,
-          terminado: doc.data().terminado,
-          fechaRegistro: doc.data().fechaRegistro,
-          imagen: doc.data().imagen,
-          inscritos: doc.data().inscritos,
-          nombre: doc.data().nombre
-        };
-        cursos.push(curso);
+      onSnapshot(collection(db, "cursos"), (querySnapshot) => {
+        const cursos = [];
+        querySnapshot.forEach(doc => {
+          const curso = {
+            id: doc.id,
+            codigo: doc.data().codigo,
+            costo: doc.data().costo,
+            cupos: doc.data().cupos,
+            descripcion: doc.data().descripcion,
+            duracion: doc.data().duracion,
+            terminado: doc.data().terminado,
+            fechaRegistro: doc.data().fechaRegistro,
+            imagen: doc.data().imagen,
+            inscritos: doc.data().inscritos,
+            nombre: doc.data().nombre
+          };
+          cursos.push(curso);
+        });
+        commit("SET_CURSOS", cursos);
       });
-      commit("SET_CURSOS", cursos);
     },
-    async addCurso({dispatch}, [codigo, costo, cupos, descripcion, duracion, terminado, imagen, inscritos, nombre]){
+    async addCurso(context, [codigo, costo, cupos, descripcion, duracion, terminado, imagen, inscritos, nombre]){
       await addDoc(collection(db, "cursos"), {
         codigo,
         costo,
@@ -82,14 +101,12 @@ export default new Vuex.Store({
         inscritos,
         nombre
       });
-      dispatch('getCursos');
     },
     updateCurso(){
 
     },
-    async deleteCurso({dispatch}, id){
+    async deleteCurso(context, id){
       await deleteDoc(doc(db, "cursos", id));
-      dispatch('getCursos');
     }
   }
 })

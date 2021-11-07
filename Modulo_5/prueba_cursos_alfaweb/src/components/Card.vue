@@ -12,7 +12,7 @@
         <v-timeline-item color="deep-purple lighten-1" small>
           <div>
             <div class="font-weight-normal">
-              Costo: <strong>{{ curso.costo }}</strong>
+              Costo: <strong>{{ formatoMoneda(curso.costo) }}</strong>
             </div>
             <div>Duración: {{ curso.duracion }}</div>
           </div>
@@ -23,7 +23,7 @@
             <div class="font-weight-normal">
               Cupos: <strong>{{ curso.cupos }}</strong>
             </div>
-            <div>Completado: {{ terminado }}</div>
+            <div>Completado: {{ terminado(curso.terminado) }}</div>
           </div>
         </v-timeline-item>
 
@@ -53,7 +53,7 @@
 
 <script>
 import utils from '@/utils/functions.js'
-const { formatDate } = utils;
+const { formatDate, terminado, formatoMoneda } = utils;
   export default {
     data(){
       return {
@@ -61,13 +61,10 @@ const { formatDate } = utils;
       }
     },
     props:['curso'],
-    computed: {
-      terminado(){
-        return this.curso.terminado ? 'Si' : 'No';
-      }
-    },
     methods: {
       formatDate,
+      terminado,
+      formatoMoneda
     }
   }
 </script>
