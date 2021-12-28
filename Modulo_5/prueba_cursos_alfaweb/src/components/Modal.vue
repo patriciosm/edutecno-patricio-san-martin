@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center">
-        <v-dialog v-model="mostrarModal" max-width="500px" @click:outside="closeModal">
+        <v-dialog v-model="mostrarModal" persistent max-width="500px" @click:outside="closeModal">
             <v-form ref="form" v-model="validForm" lazy-validation @submit.prevent="addCurso">
                 <v-card>
                     <v-card-title>
@@ -96,7 +96,7 @@ export default {
     methods: {
         closeModal(){
            this.$emit("close");
-           this.limpiaImputs();
+           this.reset();
         },
         validate () {
             this.$refs.form.validate();
@@ -108,15 +108,8 @@ export default {
                 this.closeModal();
             }
         },
-        limpiaImputs(){
-            this.nombre = '',
-            this.imagen = '',
-            this.cupos = null,
-            this.inscritos = null,
-            this.duracion = '',
-            this.costo = null,
-            this.codigo = '',
-            this.descripcion = ''
+        reset(){
+            this.$refs.form.reset()
         }
     }
 }
