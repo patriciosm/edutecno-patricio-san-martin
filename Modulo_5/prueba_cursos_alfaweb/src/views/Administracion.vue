@@ -148,7 +148,7 @@
 import utils from "@/utils/functions.js";
 import Modal from "@/components/Modal.vue";
 const { formatDate, terminado, formatoMoneda } = utils;
-import { mapGetters } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   name: "Administracion",
@@ -163,8 +163,8 @@ export default {
     };
   },
   computed: {
+    ...mapState(["cursos"]),
     ...mapGetters([
-      "cursos",
       "totalCupos",
       "totalInscritos",
       "totalCursos",

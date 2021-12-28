@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState } from 'vuex';
 import Card from '@/components/Card.vue';
 export default {
     name: 'Home',
@@ -22,7 +22,7 @@ export default {
       Card
     },
     computed:{
-      ...mapGetters(['cursos']),
+      ...mapState(['cursos']),
     }
   }
 </script>

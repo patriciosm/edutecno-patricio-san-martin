@@ -22,9 +22,6 @@ export default new Vuex.Store({
     user(state){
       return state.user
     },
-    cursos(state){
-      return state.cursos;
-    },
     totalCupos(state){
       return state.cursos.reduce((acum, c) => {
         return acum + c.cupos;
