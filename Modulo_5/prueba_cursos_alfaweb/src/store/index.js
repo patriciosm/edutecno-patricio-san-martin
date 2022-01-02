@@ -22,6 +22,10 @@ export default new Vuex.Store({
     user(state){
       return state.user
     },
+    cursoPorId:(state) => (id) =>{
+      const curso = state.cursos.find(c => c.id == id);
+      return curso;
+    },
     totalCupos(state){
       return state.cursos.reduce((acum, c) => {
         return acum + c.cupos;

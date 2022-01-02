@@ -33,9 +33,10 @@ const routes = [
     }
   },
   {
-    path: '/edicion',
+    path: '/edicion/:id',
     name: 'Edicion',
     component: () => import('@/views/Edicion.vue'),
+    props: true,
     meta: {
       autorizado: true
     }

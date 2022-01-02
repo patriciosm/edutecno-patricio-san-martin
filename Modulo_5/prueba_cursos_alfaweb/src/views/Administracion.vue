@@ -41,14 +41,10 @@
                   </v-chip>
                 </td>
                 <td>
-                  <v-btn icon color="deep-purple">
+                  <v-btn icon color="deep-purple" :to="`/edicion/${curso.id}`">
                     <v-icon>mdi-pencil</v-icon>
                   </v-btn>
-                  <v-btn
-                    icon
-                    color="red accent-2"
-                    @click="showModalDelete(curso.id)"
-                  >
+                  <v-btn icon color="red accent-2" @click="showModalDelete(curso.id)">
                     <v-icon>mdi-delete</v-icon>
                   </v-btn>
                 </td>
@@ -59,66 +55,24 @@
       </v-col>
       <v-col cols="12" class="mt-2">
         <template class="mt-5">
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="purple accent-3"
-            icon="mdi-account-group"
-          >
+          <v-alert dense outlined elevation="1" text color="purple accent-3" icon="mdi-account-group">
             Cantidad total de alumnos permitidos: {{ totalCupos }} alumnos
           </v-alert>
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="blue lighten-1"
-            icon="mdi-account-multiple-check"
-          >
+          <v-alert dense outlined elevation="1" text color="blue lighten-1" icon="mdi-account-multiple-check">
             Cantidad total de alumnos inscritos: {{ totalInscritos }} alumnos
           </v-alert>
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="red accent-3"
-            icon="mdi-account-clock"
-          >
+          <v-alert dense outlined elevation="1" text color="red accent-3" icon="mdi-account-clock">
             Cantidad total de cupos restantes:
             {{ totalCupos - totalInscritos }} alumnos
           </v-alert>
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="pink accent-4"
-            icon="mdi-cancel"
-          >
+          <v-alert dense outlined elevation="1" text color="pink accent-4" icon="mdi-cancel">
             Cantidad total de cursos terminados:
             {{ totalCursos - totalCursosActivos }} cursos
           </v-alert>
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="brown darken-1"
-            icon="mdi-bell-ring"
-          >
+          <v-alert dense outlined elevation="1" text color="brown darken-1" icon="mdi-bell-ring">
             Cantidad total de cursos activos: {{ totalCursosActivos }} cursos
           </v-alert>
-          <v-alert
-            dense
-            outlined
-            elevation="1"
-            text
-            color="deep-orange darken-1"
-            icon="mdi-bell-ring"
-          >
+          <v-alert dense outlined elevation="1" text color="deep-orange darken-1" icon="mdi-bell-ring">
             Cantidad total de cursos: {{ totalCursos }} cursos
           </v-alert>
         </template>
@@ -140,6 +94,14 @@
             </v-card>
           </v-dialog>
         </template>
+
+        <template>
+          <v-snackbar v-model="snackbar" :timeout="timeout" color="success" transition="slide-x-reverse-transition">
+            <v-icon>mdi-check</v-icon>
+            {{ snackbarText }}
+          </v-snackbar>
+        </template>
+
       </v-col>
     </v-row>
   </div>
@@ -160,6 +122,9 @@ export default {
       modal: false,
       modalDelete: false,
       idCurso: null,
+      snackbar: false,
+      timeout: 2000,
+      snackbarText: ''
     };
   },
   computed: {
@@ -185,6 +150,8 @@ export default {
     deleteCurso() {
       this.$store.dispatch("deleteCurso", this.idCurso);
       this.showModalDelete();
+      this.snackbarText = 'El curso ha sido eliminado';
+      this.snackbar = true;
     },
   },
 };
