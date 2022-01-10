@@ -79,7 +79,7 @@ export default new Vuex.Store({
             descripcion: doc.data().descripcion,
             duracion: doc.data().duracion,
             terminado: doc.data().terminado,
-            fechaRegistro: doc.data().fechaRegistro,
+            fechaRegistro: new Date(doc.data().fechaRegistro.seconds * 1000).toISOString().substr(0, 10),
             imagen: doc.data().imagen,
             inscritos: doc.data().inscritos,
             nombre: doc.data().nombre

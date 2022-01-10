@@ -37,7 +37,7 @@
                 <td>{{ terminado(curso.terminado) }}</td>
                 <td>
                   <v-chip color="success" outlined>
-                    {{ formatDate(curso.fechaRegistro.toDate()) }}
+                    {{ formatDate(curso.fechaRegistro) }}
                   </v-chip>
                 </td>
                 <td>

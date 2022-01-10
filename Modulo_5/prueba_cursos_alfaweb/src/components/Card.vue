@@ -32,7 +32,7 @@
             <div class="font-weight-normal">
               Fecha de Registro:
             </div>
-            <div>{{ formatDate(curso.fechaRegistro.toDate()) }}</div>
+            <div>{{ formatDate(curso.fechaRegistro) }}</div>
           </div>
         </v-timeline-item>
 
